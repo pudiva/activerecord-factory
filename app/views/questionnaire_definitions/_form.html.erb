@@ -1,0 +1,27 @@
+<%= form_with(model: questionnaire_definition) do |form| %>
+  <% if questionnaire_definition.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(questionnaire_definition.errors.count, "error") %> prohibited this questionnaire_definition from being saved:</h2>
+
+      <ul>
+        <% questionnaire_definition.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :schema, style: "display: block" %>
+    <%= form.text_field :schema %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

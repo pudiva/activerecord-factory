@@ -1,0 +1,12 @@
+<% content_for :title, "Editing questionnaire definition" %>
+
+<h1>Editing questionnaire definition</h1>
+
+<%= render "form", questionnaire_definition: @questionnaire_definition %>
+
+<br>
+
+<div>
+  <%= link_to "Show this questionnaire definition", @questionnaire_definition %> |
+  <%= link_to "Back to questionnaire definitions", questionnaire_definitions_path %>
+</div>

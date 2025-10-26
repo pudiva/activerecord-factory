@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @questionnaire_definition %>
+
+<div>
+  <%= link_to "Edit this questionnaire definition", edit_questionnaire_definition_path(@questionnaire_definition) %> |
+  <%= link_to "Back to questionnaire definitions", questionnaire_definitions_path %>
+
+  <%= button_to "Destroy this questionnaire definition", @questionnaire_definition, method: :delete %>
+</div>

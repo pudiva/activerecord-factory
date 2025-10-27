@@ -1,0 +1,16 @@
+#!bin/rails r
+QuestionnaireDefinition.create(
+  title: "a questionnaire",
+  schema: {
+    "amount": {
+      "type": "integer",
+      "prompt": "how many?"
+    }
+  }
+)
+
+q = QuestionnaireDefinition.find(1)
+q.data_model.create(amount: 3)
+q.data_model.create(amount: 4)
+q.data_model.create(amount: 5)
+p q.data_model.all
